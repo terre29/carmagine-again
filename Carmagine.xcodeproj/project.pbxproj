@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5D4A5FC42F5FC02B00A60825 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A5FC32F5FC02B00A60825 /* Alamofire */; };
+		5D4A5FC92F5FC1C200A60825 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A5FC82F5FC1C200A60825 /* SnapKit */; };
+		5D4A5FCD2F5FC33600A60825 /* CarmagineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FCA2F5FC33600A60825 /* CarmagineUITests.swift */; };
+		5D4A5FCE2F5FC33600A60825 /* CarmagineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FCB2F5FC33600A60825 /* CarmagineUITestsLaunchTests.swift */; };
+		5D4A5FD92F5FC33600A60825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FCF2F5FC33600A60825 /* AppDelegate.swift */; };
+		5D4A5FDA2F5FC33600A60825 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FD62F5FC33600A60825 /* SceneDelegate.swift */; };
+		5D4A5FDB2F5FC33600A60825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FD72F5FC33600A60825 /* ViewController.swift */; };
+		5D4A5FDC2F5FC33600A60825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A5FD02F5FC33600A60825 /* Assets.xcassets */; };
+		5D4A5FDE2F5FC33600A60825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A5FD32F5FC33600A60825 /* LaunchScreen.storyboard */; };
+		5D4A5FDF2F5FC33600A60825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A5FD52F5FC33600A60825 /* Main.storyboard */; };
+		5D4A5FE22F5FC33600A60825 /* CarmagineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5FE02F5FC33600A60825 /* CarmagineTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5D4A5FA52F5FBE1F00A60825 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,44 +41,26 @@
 		5D4A5F8E2F5FBE1C00A60825 /* Carmagine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carmagine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4A5FA42F5FBE1F00A60825 /* CarmagineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarmagineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4A5FAE2F5FBE1F00A60825 /* CarmagineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarmagineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4A5FCA2F5FC33600A60825 /* CarmagineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarmagineUITests.swift; sourceTree = "<group>"; };
+		5D4A5FCB2F5FC33600A60825 /* CarmagineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarmagineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D4A5FCF2F5FC33600A60825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D4A5FD02F5FC33600A60825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D4A5FD12F5FC33600A60825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D4A5FD22F5FC33600A60825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D4A5FD42F5FC33600A60825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D4A5FD62F5FC33600A60825 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5D4A5FD72F5FC33600A60825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D4A5FE02F5FC33600A60825 /* CarmagineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarmagineTests.swift; sourceTree = "<group>"; };
+		5D4A5FE32F5FC36000A60825 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5D4A5FB62F5FBE1F00A60825 /* Exceptions for "Carmagine" folder in "Carmagine" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 5D4A5F8D2F5FBE1C00A60825 /* Carmagine */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		5D4A5F902F5FBE1C00A60825 /* Carmagine */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5D4A5FB62F5FBE1F00A60825 /* Exceptions for "Carmagine" folder in "Carmagine" target */,
-			);
-			path = Carmagine;
-			sourceTree = "<group>";
-		};
-		5D4A5FA72F5FBE1F00A60825 /* CarmagineTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CarmagineTests;
-			sourceTree = "<group>";
-		};
-		5D4A5FB12F5FBE1F00A60825 /* CarmagineUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CarmagineUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5D4A5F8B2F5FBE1C00A60825 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A5FC92F5FC1C200A60825 /* SnapKit in Frameworks */,
+				5D4A5FC42F5FC02B00A60825 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +84,10 @@
 		5D4A5F852F5FBE1C00A60825 = {
 			isa = PBXGroup;
 			children = (
-				5D4A5F902F5FBE1C00A60825 /* Carmagine */,
-				5D4A5FA72F5FBE1F00A60825 /* CarmagineTests */,
-				5D4A5FB12F5FBE1F00A60825 /* CarmagineUITests */,
+				5D4A5FE32F5FC36000A60825 /* .gitignore */,
+				5D4A5FD82F5FC33600A60825 /* Carmagine */,
+				5D4A5FE12F5FC33600A60825 /* CarmagineTests */,
+				5D4A5FCC2F5FC33600A60825 /* CarmagineUITests */,
 				5D4A5F8F2F5FBE1C00A60825 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +100,37 @@
 				5D4A5FAE2F5FBE1F00A60825 /* CarmagineUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5D4A5FCC2F5FC33600A60825 /* CarmagineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A5FCA2F5FC33600A60825 /* CarmagineUITests.swift */,
+				5D4A5FCB2F5FC33600A60825 /* CarmagineUITestsLaunchTests.swift */,
+			);
+			path = CarmagineUITests;
+			sourceTree = "<group>";
+		};
+		5D4A5FD82F5FC33600A60825 /* Carmagine */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A5FCF2F5FC33600A60825 /* AppDelegate.swift */,
+				5D4A5FD02F5FC33600A60825 /* Assets.xcassets */,
+				5D4A5FD12F5FC33600A60825 /* Info.plist */,
+				5D4A5FD32F5FC33600A60825 /* LaunchScreen.storyboard */,
+				5D4A5FD52F5FC33600A60825 /* Main.storyboard */,
+				5D4A5FD62F5FC33600A60825 /* SceneDelegate.swift */,
+				5D4A5FD72F5FC33600A60825 /* ViewController.swift */,
+			);
+			path = Carmagine;
+			sourceTree = "<group>";
+		};
+		5D4A5FE12F5FC33600A60825 /* CarmagineTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A5FE02F5FC33600A60825 /* CarmagineTests.swift */,
+			);
+			path = CarmagineTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,11 +148,10 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				5D4A5F902F5FBE1C00A60825 /* Carmagine */,
-			);
 			name = Carmagine;
 			packageProductDependencies = (
+				5D4A5FC32F5FC02B00A60825 /* Alamofire */,
+				5D4A5FC82F5FC1C200A60825 /* SnapKit */,
 			);
 			productName = Carmagine;
 			productReference = 5D4A5F8E2F5FBE1C00A60825 /* Carmagine.app */;
@@ -142,9 +169,6 @@
 			);
 			dependencies = (
 				5D4A5FA62F5FBE1F00A60825 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5D4A5FA72F5FBE1F00A60825 /* CarmagineTests */,
 			);
 			name = CarmagineTests;
 			packageProductDependencies = (
@@ -165,9 +189,6 @@
 			);
 			dependencies = (
 				5D4A5FB02F5FBE1F00A60825 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5D4A5FB12F5FBE1F00A60825 /* CarmagineUITests */,
 			);
 			name = CarmagineUITests;
 			packageProductDependencies = (
@@ -208,6 +229,10 @@
 			);
 			mainGroup = 5D4A5F852F5FBE1C00A60825;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5D4A5FC22F5FC02B00A60825 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5D4A5FC72F5FC1C200A60825 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5D4A5F8F2F5FBE1C00A60825 /* Products */;
 			projectDirPath = "";
@@ -225,6 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A5FDC2F5FC33600A60825 /* Assets.xcassets in Resources */,
+				5D4A5FDE2F5FC33600A60825 /* LaunchScreen.storyboard in Resources */,
+				5D4A5FDF2F5FC33600A60825 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A5FD92F5FC33600A60825 /* AppDelegate.swift in Sources */,
+				5D4A5FDA2F5FC33600A60825 /* SceneDelegate.swift in Sources */,
+				5D4A5FDB2F5FC33600A60825 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A5FE22F5FC33600A60825 /* CarmagineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A5FCD2F5FC33600A60825 /* CarmagineUITests.swift in Sources */,
+				5D4A5FCE2F5FC33600A60825 /* CarmagineUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +314,25 @@
 			targetProxy = 5D4A5FAF2F5FBE1F00A60825 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D4A5FD32F5FC33600A60825 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D4A5FD22F5FC33600A60825 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5D4A5FD52F5FC33600A60825 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D4A5FD42F5FC33600A60825 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5D4A5FB82F5FBE1F00A60825 /* Debug */ = {
@@ -583,6 +636,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D4A5FC22F5FC02B00A60825 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		5D4A5FC72F5FC1C200A60825 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D4A5FC32F5FC02B00A60825 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D4A5FC22F5FC02B00A60825 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5D4A5FC82F5FC1C200A60825 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D4A5FC72F5FC1C200A60825 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D4A5F862F5FBE1C00A60825 /* Project object */;
 }
