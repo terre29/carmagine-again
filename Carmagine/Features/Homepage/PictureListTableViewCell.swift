@@ -29,6 +29,7 @@ final class PictureListTableViewCell: UITableViewCell {
     lazy var image: UIImageView = {
         let image = UIImageView()
         image.clipsToBounds = true
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -51,29 +52,28 @@ final class PictureListTableViewCell: UITableViewCell {
     
     func setupCell(model: PictureViewModel) {
         if let url = URL(string: model.url ?? "") {
-            image.kf.setImage(with: url) { [weak self] result in
-                guard let self else { return }
-                switch result {
-                case .success(let image):
-                    DispatchQueue.main.async { [weak self] in
-                        self?.image.image = image.image
-                    }
-                case .failure(let error):
-                    break
-                }
-            }
+            let processor = DownsamplingImageProcessor(size: CGSize(width: 80, height: 80))
+            image.kf.setImage(
+                with: url,
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .cacheOriginalImage
+                ]
+            )
         }
         authorLabel.text = "Author: \(model.author ?? "")"
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         image.image = nil
         authorLabel.text = nil
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        baseView.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 2, height: 2), radius: 3, cornerRadius: 8)
+        baseView.layer.shadowPath = UIBezierPath(roundedRect: baseView.bounds, cornerRadius: 8).cgPath
     }
 }
 
@@ -107,6 +107,7 @@ extension PictureListTableViewCell: ViewCodeProtocol {
         baseStackView.layer.cornerRadius = 8
         baseStackView.clipsToBounds = true
         baseStackView.backgroundColor = .white
+        baseView.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 2, height: 2), radius: 3, cornerRadius: 8)
     }
     
 }

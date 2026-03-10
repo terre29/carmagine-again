@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 protocol HomePageDisplayLogic: AnyObject {
     func displayPictureList(viewModel: [PictureViewModel])
@@ -25,6 +26,7 @@ final class HomePageViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.prefetchDataSource = self
         tableView.register(PictureListTableViewCell.self, forCellReuseIdentifier: "cell")
         applyViewCode()
         getPictureList()
@@ -55,6 +57,16 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
         guard let picture = interactor?.pictureToShow?[indexPath.row] else { return UITableViewCell() }
         cell.setupCell(model: picture)
         return cell
+    }
+}
+
+extension HomePageViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        interactor?.prefetchImages(at: indexPaths.map({ $0.row }))
+    }
+
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        interactor?.cancelPrefetchImages(at: indexPaths.map({ $0.row }))
     }
 }
 
