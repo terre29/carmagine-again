@@ -6,20 +6,16 @@
 //
 
 protocol HomePageWorkerProtocol {
-    func getPictureList() async throws -> [PictureResponse]
+    func getPictureList(page: Int, limit: Int) async throws -> [PictureResponse]
 }
 
 final class HomePageWorker: HomePageWorkerProtocol {
-    
+
     let client = RestClient.shared
-    
-    func getPictureList() async throws -> [PictureResponse] {
-        do {
-            let response = try await client.getRequest(endPoint: .list, request: nil, response: [PictureResponse].self)
-            return response
-        } catch let error {
-            throw error
-        }
-    
+
+    func getPictureList(page: Int, limit: Int) async throws -> [PictureResponse] {
+        let parameters: [String: Any] = ["page": page, "limit": limit]
+        let response = try await client.getRequest(endPoint: .list, request: parameters, response: [PictureResponse].self)
+        return response
     }
 }

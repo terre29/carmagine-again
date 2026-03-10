@@ -11,6 +11,7 @@ import Kingfisher
 
 protocol HomePageDisplayLogic: AnyObject {
     func displayPictureList(viewModel: [PictureViewModel])
+    func displayNextPage(viewModel: [PictureViewModel])
 }
 
 final class HomePageViewController: UIViewController {
@@ -38,12 +39,25 @@ final class HomePageViewController: UIViewController {
         }
     }
     
+    private func loadMorePicture() {
+        Task {
+            await interactor?.loadNextPage()
+        }
+    }
+    
 }
 
 extension HomePageViewController: HomePageDisplayLogic {
     func displayPictureList(viewModel: [PictureViewModel]) {
         interactor?.pictureToShow = viewModel
         tableView.reloadData()
+    }
+
+    func displayNextPage(viewModel: [PictureViewModel]) {
+        let startIndex = interactor?.pictureToShow?.count ?? 0
+        interactor?.pictureToShow?.append(contentsOf: viewModel)
+        let indexPaths = (startIndex..<startIndex + viewModel.count).map { IndexPath(row: $0, section: 0) }
+        tableView.insertRows(at: indexPaths, with: .none)
     }
 }
 
@@ -57,6 +71,18 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
         guard let picture = interactor?.pictureToShow?[indexPath.row] else { return UITableViewCell() }
         cell.setupCell(model: picture)
         return cell
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let frameHeight = scrollView.frame.size.height
+
+        guard contentHeight > 0 else { return }
+
+        if offsetY > contentHeight - frameHeight * 3 {
+           loadMorePicture()
+        }
     }
 }
 
