@@ -33,6 +33,13 @@
 		5D872F7B2F610AC10016D769 /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F772F610AC10016D769 /* DetailPageInteractor.swift */; };
 		5D872F7C2F610AC10016D769 /* DetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F782F610AC10016D769 /* DetailPagePresenter.swift */; };
 		5D872F7D2F610AC10016D769 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F792F610AC10016D769 /* DetailPageViewController.swift */; };
+		5D872F802F6110640016D769 /* FirstName.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F7F2F61105E0016D769 /* FirstName.json */; };
+		5D872F822F61107D0016D769 /* LastName.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F812F6110750016D769 /* LastName.json */; };
+		5D872F842F6110A10016D769 /* Nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F832F61109C0016D769 /* Nouns.json */; };
+		5D872F862F6110BC0016D769 /* Verbs.json in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F852F6110B70016D769 /* Verbs.json */; };
+		5D872F892F6112830016D769 /* DetailPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F882F6112830016D769 /* DetailPageModel.swift */; };
+		5D872F8A2F6112830016D769 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F872F6112830016D769 /* CommentTableViewCell.swift */; };
+		5D872F8E2F6114870016D769 /* CommentRandomizerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,13 @@
 		5D872F772F610AC10016D769 /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
 		5D872F782F610AC10016D769 /* DetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePresenter.swift; sourceTree = "<group>"; };
 		5D872F792F610AC10016D769 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		5D872F7F2F61105E0016D769 /* FirstName.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FirstName.json; sourceTree = "<group>"; };
+		5D872F812F6110750016D769 /* LastName.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LastName.json; sourceTree = "<group>"; };
+		5D872F832F61109C0016D769 /* Nouns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Nouns.json; sourceTree = "<group>"; };
+		5D872F852F6110B70016D769 /* Verbs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Verbs.json; sourceTree = "<group>"; };
+		5D872F872F6112830016D769 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		5D872F882F6112830016D769 /* DetailPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageModel.swift; sourceTree = "<group>"; };
+		5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRandomizerUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +158,7 @@
 		5D4A5FD82F5FC33600A60825 /* Carmagine */ = {
 			isa = PBXGroup;
 			children = (
+				5D872F8C2F61147C0016D769 /* Utils */,
 				5D872F702F601F020016D769 /* Extension */,
 				5D872F602F5FF44B0016D769 /* RestClient */,
 				5D872F5B2F5FF2310016D769 /* Protocol */,
@@ -225,12 +240,34 @@
 		5D872F752F6108D40016D769 /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5D872F7E2F61100F0016D769 /* CommentResources */,
+				5D872F872F6112830016D769 /* CommentTableViewCell.swift */,
+				5D872F882F6112830016D769 /* DetailPageModel.swift */,
 				5D872F762F610AC10016D769 /* DetailPageComposer.swift */,
 				5D872F772F610AC10016D769 /* DetailPageInteractor.swift */,
 				5D872F782F610AC10016D769 /* DetailPagePresenter.swift */,
 				5D872F792F610AC10016D769 /* DetailPageViewController.swift */,
 			);
 			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		5D872F7E2F61100F0016D769 /* CommentResources */ = {
+			isa = PBXGroup;
+			children = (
+				5D872F852F6110B70016D769 /* Verbs.json */,
+				5D872F832F61109C0016D769 /* Nouns.json */,
+				5D872F812F6110750016D769 /* LastName.json */,
+				5D872F7F2F61105E0016D769 /* FirstName.json */,
+			);
+			path = CommentResources;
+			sourceTree = "<group>";
+		};
+		5D872F8C2F61147C0016D769 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,8 +389,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D872F842F6110A10016D769 /* Nouns.json in Resources */,
 				5D4A5FDC2F5FC33600A60825 /* Assets.xcassets in Resources */,
 				5D4A5FDE2F5FC33600A60825 /* LaunchScreen.storyboard in Resources */,
+				5D872F822F61107D0016D769 /* LastName.json in Resources */,
+				5D872F802F6110640016D769 /* FirstName.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +426,13 @@
 				5D872F7A2F610AC10016D769 /* DetailPageComposer.swift in Sources */,
 				5D872F7B2F610AC10016D769 /* DetailPageInteractor.swift in Sources */,
 				5D872F7C2F610AC10016D769 /* DetailPagePresenter.swift in Sources */,
+				5D872F8E2F6114870016D769 /* CommentRandomizerUtil.swift in Sources */,
 				5D872F7D2F610AC10016D769 /* DetailPageViewController.swift in Sources */,
+				5D872F862F6110BC0016D769 /* Verbs.json in Sources */,
 				5D872F662F600B370016D769 /* HomePageWorker.swift in Sources */,
 				5D4A5FDA2F5FC33600A60825 /* SceneDelegate.swift in Sources */,
+				5D872F892F6112830016D769 /* DetailPageModel.swift in Sources */,
+				5D872F8A2F6112830016D769 /* CommentTableViewCell.swift in Sources */,
 				5D872F572F5FEC3C0016D769 /* HomePageInteractor.swift in Sources */,
 				5D872F722F601F0F0016D769 /* UIView+Extension.swift in Sources */,
 				5D872F6B2F600D900016D769 /* PictureListTableViewCell.swift in Sources */,

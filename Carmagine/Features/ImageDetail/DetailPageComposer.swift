@@ -14,6 +14,7 @@ final class DetailPageComposer {
         let presenter = DetailPagePresenter()
 
         viewController.interactor = interactor
+        viewController.title = "Image Detail"
 
         interactor.picture = picture
         interactor.presenter = presenter
