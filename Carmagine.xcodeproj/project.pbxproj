@@ -246,7 +246,6 @@
 		5D872F752F6108D40016D769 /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				5D872F942F6129BE0016D769 /* DetailPageWorker.swift */,
 				5D872F7E2F61100F0016D769 /* CommentResources */,
 				5D872F872F6112830016D769 /* CommentTableViewCell.swift */,
 				5D872F882F6112830016D769 /* DetailPageModel.swift */,
@@ -254,6 +253,7 @@
 				5D872F772F610AC10016D769 /* DetailPageInteractor.swift */,
 				5D872F782F610AC10016D769 /* DetailPagePresenter.swift */,
 				5D872F792F610AC10016D769 /* DetailPageViewController.swift */,
+				5D872F942F6129BE0016D769 /* DetailPageWorker.swift */,
 			);
 			path = ImageDetail;
 			sourceTree = "<group>";

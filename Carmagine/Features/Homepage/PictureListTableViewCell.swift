@@ -51,6 +51,9 @@ final class PictureListTableViewCell: UITableViewCell {
     }
     
     func setupCell(model: PictureViewModel) {
+        image.showSkeleton(cornerRadius: 8)
+        authorLabel.showSkeleton(cornerRadius: 4)
+
         if let url = URL(string: model.url ?? "") {
             let processor = DownsamplingImageProcessor(size: CGSize(width: 80, height: 80))
             image.kf.setImage(
@@ -60,14 +63,20 @@ final class PictureListTableViewCell: UITableViewCell {
                     .scaleFactor(UIScreen.main.scale),
                     .cacheOriginalImage
                 ]
-            )
+            ) { [weak self] _ in
+                self?.image.hideSkeleton()
+            }
         }
+        authorLabel.hideSkeleton()
         authorLabel.text = "Author: \(model.author ?? "")"
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        image.kf.cancelDownloadTask()
+        image.hideSkeleton()
         image.image = nil
+        authorLabel.hideSkeleton()
         authorLabel.text = nil
     }
 
