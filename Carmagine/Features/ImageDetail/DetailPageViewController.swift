@@ -78,6 +78,17 @@ extension DetailPageViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            interactor?.deleteComment(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }
 
 extension DetailPageViewController: ViewCodeProtocol {

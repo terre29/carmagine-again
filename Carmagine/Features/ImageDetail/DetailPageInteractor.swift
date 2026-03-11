@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailPageBusinessLogic {
     func addComment()
+    func deleteComment(at index: Int)
 }
 
 protocol DetailPageDataStore {
@@ -26,5 +27,9 @@ extension DetailPageInteractor: DetailPageBusinessLogic {
     func addComment() {
         let comment = CommentRandomizerUtil.shared.generateComment()
         presenter?.presentNewComment(comment: comment)
+    }
+    
+    func deleteComment(at index: Int) {
+        comments?.remove(at: index)
     }
 }
