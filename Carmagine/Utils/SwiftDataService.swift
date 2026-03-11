@@ -6,6 +6,7 @@
 //
 
 import SwiftData
+import Foundation
 
 class SwiftDataService {
     static let shared = SwiftDataService()
@@ -19,8 +20,8 @@ class SwiftDataService {
             if let container {
                 context = ModelContext(container)
             }
-        } catch let error {
-            
+        } catch {
+            print("Failed to initialize ModelContainer: \(error.localizedDescription)")
         }
     }
 }

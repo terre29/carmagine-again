@@ -40,9 +40,9 @@ extension HomePageInteractor: HomePageBusinessLogic {
         do {
             let picture = try await worker?.getPictureList(page: currentPage, limit: limit)
             hasMorePages = (picture?.count ?? 0) >= limit
-            presenter?.presentSuccessGetList(pictureListResponse: picture!)
+            presenter?.presentSuccessGetList(pictureListResponse: picture ?? [])
         } catch {
-            presenter?.presentFailedGetList()
+            presenter?.presentFailedGetList(error: error)
         }
         isLoading = false
     }
@@ -57,7 +57,7 @@ extension HomePageInteractor: HomePageBusinessLogic {
             presenter?.presentNextPage(pictureListResponse: picture ?? [])
         } catch {
             currentPage -= 1
-            presenter?.presentFailedGetList()
+            presenter?.presentFailedGetList(error: error)
         }
         isLoading = false
     }

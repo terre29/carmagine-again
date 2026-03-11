@@ -58,18 +58,14 @@ class CommentRandomizerUtil {
     
     private func loadWords(from file: String) -> [String] {
         guard let url = Bundle.main.url(forResource: file, withExtension: "json") else {
-            print("❌ File not found: \(file).json")
             return []
         }
         
         guard let data = try? Data(contentsOf: url) else {
-            print("❌ Could not read data from: \(file).json")
             return []
         }
-        
-        // Decode directly as [String] — no key needed!
+      
         guard let words = try? JSONDecoder().decode([String].self, from: data) else {
-            print("❌ Could not parse JSON in: \(file).json")
             return []
         }
         

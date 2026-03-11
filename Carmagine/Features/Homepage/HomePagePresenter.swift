@@ -5,10 +5,11 @@
 //  Created by Terretino on 10/03/26.
 //
 
+import Foundation
 protocol HomePagePresentationLogic {
     func presentSuccessGetList(pictureListResponse: [PictureResponse])
     func presentNextPage(pictureListResponse: [PictureResponse])
-    func presentFailedGetList()
+    func presentFailedGetList(error: Error)
 }
 
 final class HomePagePresenter {
@@ -30,7 +31,7 @@ extension HomePagePresenter: HomePagePresentationLogic {
         viewController?.displayNextPage(viewModel: viewModel)
     }
 
-    func presentFailedGetList() {
-
+    func presentFailedGetList(error: Error) {
+        viewController?.displayError(message: error.localizedDescription)
     }
 }

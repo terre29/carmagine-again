@@ -12,6 +12,7 @@ import Kingfisher
 protocol HomePageDisplayLogic: AnyObject {
     func displayPictureList(viewModel: [PictureViewModel])
     func displayNextPage(viewModel: [PictureViewModel])
+    func displayError(message: String)
 }
 
 final class HomePageViewController: UIViewController {
@@ -58,6 +59,12 @@ extension HomePageViewController: HomePageDisplayLogic {
         interactor?.pictureToShow?.append(contentsOf: viewModel)
         let indexPaths = (startIndex..<startIndex + viewModel.count).map { IndexPath(row: $0, section: 0) }
         tableView.insertRows(at: indexPaths, with: .none)
+    }
+
+    func displayError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
 
