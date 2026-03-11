@@ -29,6 +29,10 @@
 		5D872F6B2F600D900016D769 /* PictureListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F6A2F600D890016D769 /* PictureListTableViewCell.swift */; };
 		5D872F6D2F60154F0016D769 /* HomePageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F6C2F60154B0016D769 /* HomePageComposer.swift */; };
 		5D872F722F601F0F0016D769 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F712F601F0C0016D769 /* UIView+Extension.swift */; };
+		5D872F7A2F610AC10016D769 /* DetailPageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F762F610AC10016D769 /* DetailPageComposer.swift */; };
+		5D872F7B2F610AC10016D769 /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F772F610AC10016D769 /* DetailPageInteractor.swift */; };
+		5D872F7C2F610AC10016D769 /* DetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F782F610AC10016D769 /* DetailPagePresenter.swift */; };
+		5D872F7D2F610AC10016D769 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F792F610AC10016D769 /* DetailPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		5D872F6A2F600D890016D769 /* PictureListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureListTableViewCell.swift; sourceTree = "<group>"; };
 		5D872F6C2F60154B0016D769 /* HomePageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageComposer.swift; sourceTree = "<group>"; };
 		5D872F712F601F0C0016D769 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5D872F762F610AC10016D769 /* DetailPageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageComposer.swift; sourceTree = "<group>"; };
+		5D872F772F610AC10016D769 /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
+		5D872F782F610AC10016D769 /* DetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePresenter.swift; sourceTree = "<group>"; };
+		5D872F792F610AC10016D769 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,9 @@
 		5D4A5FD82F5FC33600A60825 /* Carmagine */ = {
 			isa = PBXGroup;
 			children = (
+				5D872F702F601F020016D769 /* Extension */,
+				5D872F602F5FF44B0016D769 /* RestClient */,
+				5D872F5B2F5FF2310016D769 /* Protocol */,
 				5D872F522F5FEBBB0016D769 /* Features */,
 				5D872F512F5FEBA10016D769 /* App */,
 				5D4A5FD02F5FC33600A60825 /* Assets.xcassets */,
@@ -166,9 +177,7 @@
 		5D872F522F5FEBBB0016D769 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				5D872F702F601F020016D769 /* Extension */,
-				5D872F602F5FF44B0016D769 /* RestClient */,
-				5D872F5B2F5FF2310016D769 /* Protocol */,
+				5D872F752F6108D40016D769 /* ImageDetail */,
 				5D872F532F5FEBCA0016D769 /* Homepage */,
 			);
 			path = Features;
@@ -211,6 +220,17 @@
 				5D872F712F601F0C0016D769 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		5D872F752F6108D40016D769 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5D872F762F610AC10016D769 /* DetailPageComposer.swift */,
+				5D872F772F610AC10016D769 /* DetailPageInteractor.swift */,
+				5D872F782F610AC10016D769 /* DetailPagePresenter.swift */,
+				5D872F792F610AC10016D769 /* DetailPageViewController.swift */,
+			);
+			path = ImageDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +383,10 @@
 				5D4A5FD92F5FC33600A60825 /* AppDelegate.swift in Sources */,
 				5D872F5D2F5FF23E0016D769 /* ViewCodeProtocol.swift in Sources */,
 				5D872F5F2F5FF3720016D769 /* HomePagePresenter.swift in Sources */,
+				5D872F7A2F610AC10016D769 /* DetailPageComposer.swift in Sources */,
+				5D872F7B2F610AC10016D769 /* DetailPageInteractor.swift in Sources */,
+				5D872F7C2F610AC10016D769 /* DetailPagePresenter.swift in Sources */,
+				5D872F7D2F610AC10016D769 /* DetailPageViewController.swift in Sources */,
 				5D872F662F600B370016D769 /* HomePageWorker.swift in Sources */,
 				5D4A5FDA2F5FC33600A60825 /* SceneDelegate.swift in Sources */,
 				5D872F572F5FEC3C0016D769 /* HomePageInteractor.swift in Sources */,

@@ -73,6 +73,13 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let picture = interactor?.pictureToShow?[indexPath.row] else { return }
+        let detailVC = DetailPageComposer.composeDetailPage(picture: picture)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
@@ -103,7 +110,7 @@ extension HomePageViewController: ViewCodeProtocol {
     
     func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.verticalEdges.equalToSuperview().inset(16)
+            make.verticalEdges.equalTo(view.safeAreaLayoutGuide)
             make.horizontalEdges.equalToSuperview()
         }
     }
