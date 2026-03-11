@@ -92,7 +92,8 @@ extension DetailPageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
             interactor?.deleteComment(at: indexPath.row)
-            tableView.reloadData()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
     }
 }
