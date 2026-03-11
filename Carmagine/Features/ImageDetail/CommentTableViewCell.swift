@@ -65,7 +65,7 @@ final class CommentTableViewCell: UITableViewCell {
         avatarView.backgroundColor = .gray
         authorLabel.text = model.author
         commentLabel.text = model.body
-        dateLabel.text = model.date
+        dateLabel.text = model.dateString
     }
 
     override func prepareForReuse() {

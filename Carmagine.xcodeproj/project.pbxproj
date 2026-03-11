@@ -36,10 +36,13 @@
 		5D872F802F6110640016D769 /* FirstName.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F7F2F61105E0016D769 /* FirstName.json */; };
 		5D872F822F61107D0016D769 /* LastName.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F812F6110750016D769 /* LastName.json */; };
 		5D872F842F6110A10016D769 /* Nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F832F61109C0016D769 /* Nouns.json */; };
-		5D872F862F6110BC0016D769 /* Verbs.json in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F852F6110B70016D769 /* Verbs.json */; };
 		5D872F892F6112830016D769 /* DetailPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F882F6112830016D769 /* DetailPageModel.swift */; };
 		5D872F8A2F6112830016D769 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F872F6112830016D769 /* CommentTableViewCell.swift */; };
 		5D872F8E2F6114870016D769 /* CommentRandomizerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */; };
+		5D872F902F6123A70016D769 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F8F2F6123910016D769 /* Comment.swift */; };
+		5D872F932F6125910016D769 /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F922F61258A0016D769 /* SwiftDataService.swift */; };
+		5D872F952F6129C70016D769 /* DetailPageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D872F942F6129BE0016D769 /* DetailPageWorker.swift */; };
+		5D872F962F6156960016D769 /* Verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D872F852F6110B70016D769 /* Verbs.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		5D872F872F6112830016D769 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		5D872F882F6112830016D769 /* DetailPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageModel.swift; sourceTree = "<group>"; };
 		5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRandomizerUtil.swift; sourceTree = "<group>"; };
+		5D872F8F2F6123910016D769 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5D872F922F61258A0016D769 /* SwiftDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
+		5D872F942F6129BE0016D769 /* DetailPageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,7 @@
 		5D872F752F6108D40016D769 /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5D872F942F6129BE0016D769 /* DetailPageWorker.swift */,
 				5D872F7E2F61100F0016D769 /* CommentResources */,
 				5D872F872F6112830016D769 /* CommentTableViewCell.swift */,
 				5D872F882F6112830016D769 /* DetailPageModel.swift */,
@@ -265,9 +272,19 @@
 		5D872F8C2F61147C0016D769 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */,
+				5D872F922F61258A0016D769 /* SwiftDataService.swift */,
+				5D872F912F6125590016D769 /* CommentUtils */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D872F912F6125590016D769 /* CommentUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5D872F8F2F6123910016D769 /* Comment.swift */,
+				5D872F8D2F6114810016D769 /* CommentRandomizerUtil.swift */,
+			);
+			path = CommentUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D872F962F6156960016D769 /* Verbs.json in Resources */,
 				5D872F842F6110A10016D769 /* Nouns.json in Resources */,
 				5D4A5FDC2F5FC33600A60825 /* Assets.xcassets in Resources */,
 				5D4A5FDE2F5FC33600A60825 /* LaunchScreen.storyboard in Resources */,
@@ -426,9 +444,11 @@
 				5D872F7A2F610AC10016D769 /* DetailPageComposer.swift in Sources */,
 				5D872F7B2F610AC10016D769 /* DetailPageInteractor.swift in Sources */,
 				5D872F7C2F610AC10016D769 /* DetailPagePresenter.swift in Sources */,
+				5D872F902F6123A70016D769 /* Comment.swift in Sources */,
+				5D872F932F6125910016D769 /* SwiftDataService.swift in Sources */,
 				5D872F8E2F6114870016D769 /* CommentRandomizerUtil.swift in Sources */,
+				5D872F952F6129C70016D769 /* DetailPageWorker.swift in Sources */,
 				5D872F7D2F610AC10016D769 /* DetailPageViewController.swift in Sources */,
-				5D872F862F6110BC0016D769 /* Verbs.json in Sources */,
 				5D872F662F600B370016D769 /* HomePageWorker.swift in Sources */,
 				5D4A5FDA2F5FC33600A60825 /* SceneDelegate.swift in Sources */,
 				5D872F892F6112830016D769 /* DetailPageModel.swift in Sources */,
@@ -500,7 +520,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,7 +551,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

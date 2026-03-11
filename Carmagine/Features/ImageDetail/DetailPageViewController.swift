@@ -11,6 +11,7 @@ import Kingfisher
 
 protocol DetailPageDisplayLogic: AnyObject {
     func displayNewComment(viewModel: CommentViewModel)
+    func displayComments()
 }
 
 final class DetailPageViewController: UIViewController {
@@ -37,6 +38,7 @@ final class DetailPageViewController: UIViewController {
         applyViewCode()
         setupNavBar()
         loadImage()
+        interactor?.fetchComment()
     }
 
     private func setupNavBar() {
@@ -63,6 +65,10 @@ extension DetailPageViewController: DetailPageDisplayLogic {
         interactor?.comments?.append(viewModel)
         let indexPath = IndexPath(row: (interactor?.comments?.count ?? 1) - 1, section: 0)
         commentTableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+    func displayComments() {
+        commentTableView.reloadData()
     }
 }
 

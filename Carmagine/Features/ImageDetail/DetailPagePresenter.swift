@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailPagePresentationLogic {
     func presentNewComment(comment: CommentModel)
+    func presentComments()
 }
 
 final class DetailPagePresenter {
@@ -20,17 +21,18 @@ extension DetailPagePresenter: DetailPagePresentationLogic {
         let name = comment.name ?? ""
         let words = name.split(separator: " ")
         let initials = words.map { String($0.prefix(1)).uppercased() }.joined()
-
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
-        let dateString = formatter.localizedString(for: comment.dateAdded ?? Date(), relativeTo: Date())
-
+        
         let viewModel = CommentViewModel(
+            id: comment.id ?? UUID(),
             author: name,
             initials: initials,
             body: comment.comment ?? "",
-            date: dateString
+            date: comment.dateAdded ?? Date(),
         )
         viewController?.displayNewComment(viewModel: viewModel)
+    }
+    
+    func presentComments() {
+        viewController?.displayComments()
     }
 }
